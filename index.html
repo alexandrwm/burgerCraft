@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurgerCraft</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
+</head>
+<body>
+    <div class="page_content">
+    <header>
+        <div class="navheader">
+            <div class="logo">
+                <img src="logo.svg" alt="BurgerCraft"> 
+            </div>
+            <div class="middle-part">
+                <div class="topPart">
+                    <div class="contacts">
+                        <div class="phone">
+                           
+                            <span>0793 38 000</span>
+                           
+    
+                        </div>
+                        <div class="mail">
+                            <span>info@burgercraft.md </span>
+                        </div>
+                        <div class="info">
+                            <span>livrare</span>
+    
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <span class="cart-icon"></span>
+                    </div>
+    
+                </div>
+                <div class="bottomPart">
+                    <a href="">Acasǎ</a>
+                    <a href="">Meniu
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <a href="">Creazea-ti Burgerul</a>
+                    <a href="">Despre Noi</a>
+                    <a href="">Blog</a>
+                </div>
+            </div>
+    
+            <div class="social_lang">
+                <div class="social">
+                    <a href="#">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+    
+                <div class="lang">
+                    <a href="#">RO</a>
+                    <a href="#">RU</a>
+                    <a href="#">EN</a>
+                </div>
+            </div>
+          
+            
+            
+            
+        </div>    
+    </header>
+    <div class="container">
+        <div class="left_side">
+            <div class="burger_crafting">
+                <label class="option" id="chifla-option" >1. Chifla</label>
+                <div class="selection" >
+                    <select  id="chifla">
+                        <option value="brioche">Chifla BRIOCHE (8lei)</option>
+                    </select>
+                </div>
+
+                <div class="burger-item" id="carne-option-block" >
+                    <label class="option" id="carne-option" >2. CARNE</label>
+                    <div class="select">
+                        <select  id="carne">
+                            <option value="vita">Pârjoalǎ vita (35lei)</option>
+                            <option value="pui-pane">Fileu Pui pane (25lei)</option>
+                            <option value="pui-grill">fileu pui grill (25lei)</option>
+                        </select>
+                        <div class="remove-clone"></div>
+                    </div>
+                </div>
+
+                <div class="add_item add-meat-item">
+                    <span class="plus-icon">+</span>
+                    <span class="text">Adauga item</span>
+                </div>
+               
+
+                <div class="burger-item" id="sos-option-block">
+                    <label class="option" id="sos-bottom-option" >3. SOS CHIFLA JOS
+                    </label>
+                    <div class="select">
+                    <select  id="sos_bottom">
+                        <option value="no_selection">-</option>
+                        <option value="ketchup">Sos Ketchup (4lei)</option>
+                        <option value="tartar">sos tartar (4lei)</option>
+                        <option value="maioneza">sos maioneza (4lei)</option>
+                        <option value="usturoi&bbq">sos usturoi&bbq (4lei)</option>
+                        <option value="sriracha">sos sriracha (iute) (6lei)</option>
+                        <option value="classy">sos classy (4lei)</option>
+                        <option value="usturoi">sos usturoi (4lei)</option>
+                    </select>
+                    <div class="remove-clone"></div>
+                    </div>
+                </div>
+
+                <div class="add_item add-sos-item">
+                    <span class="plus-icon"></span>
+                    <span class="text">Adauga item</span>
+                </div>
+             
+                <div class="burger-item" id="sos-top-option-block">
+                    <label  class="option" id="sos-top-option" >4. SOS CHIFLA SUS
+                    </label>
+                    <div class="select">
+                        <select  id="sos_top">
+                            <option value="no_selection">-</option>
+                            <option value="ketchup">Sos Ketchup (4lei)</option>
+                            <option value="tartar">sos tartar (4lei)</option>
+                            <option value="maioneza">sos maioneza (4lei)</option>
+                            <option value="usturoi&bbq">sos usturoi&bbq (4lei)</option>
+                            <option value="sriracha">sos sriracha (iute) (6lei)</option>
+                            <option value="classy">sos classy (4lei)</option>
+                            <option value="usturoi">sos usturoi (4lei)</option>
+                        </select>
+                        <div class="remove-clone"></div>
+                    </div>
+                </div>
+
+                <div class="add_item add-sos-top-item">
+                    <span class="plus-icon"></span>
+                    <span class="text">Adauga item</span>
+                </div>
+                 
+                <div class="burger-item" id="cascaval-option-block">
+                    <label class="option" id="cascaval-option" >5. Caşcaval </label>
+                    <div class="select">
+                        <select  id="cascaval">
+                             <option value="no_selection">-</option>
+                             <option value="cheddar">Cașcaval Chedar (12lei)</option>
+                             <option value="dorblu">Cașcaval dorblu (15lei)</option>
+                    
+                        </select>
+                    <div class="remove-clone"></div>
+                    </div>
+                </div>
+
+                <div class="add_item add-cascaval-item">
+                    <span class="plus-icon"></span>
+                    <span class="text">Adauga item</span>
+                </div>
+             
+                <div class="burger-item" id="topping-option-block">
+                  <label class="option" id="topping-option" >6. Topping </label>
+                        <div class="select">
+                          <select  id="topping">
+                            <option value="no_selection">-</option>
+                            <option value="bacon">bacon crocant (12lei)</option>
+                            <option value="ou-prajit">ou prǎjit (10lei)</option>
+                            <option value="ceapa-marin">ceapa marin. (2lei)</option>
+                            <option value="ceapa-caramel">ceapa caramel (4lei)</option>
+                            <option value="castraveti-murati">castraveți murați (4lei)</option>
+                            <option value="castraveti-proaspeti">castraveți proaspeți (4lei)</option>
+                            <option value="rosii">roşii (5lei)</option>
+                            <option value="iceberg">iceberg (5lei)</option>
+                         </select>
+                         <div class="remove-clone"></div>
+                        </div> 
+                </div>
+
+                <div class="add_item add-topping-item">
+                    <span class="plus-icon"></span>
+                    <span class="text">Adauga item</span>
+                </div>
+                
+
+                <div class="persName">
+                    <input type="text" placeholder="Numeşte-ți burgerul &#127828;">
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="right_side">
+            <div class="burger-images">
+                <div class="burger-image burger-top" >
+                    <span class="img-description">CHIFLA BRIOCHE</span>
+                    <img src="	https://burgercraft.md/img/settings-store/2017-10-04/asset-1.svg" alt="chifla-top">
+                </div>
+                <div class="burger-image burger-sos-top" >
+                    <span  class="img-description"></span>
+                    <img src="" alt="">
+                </div>
+                <div class="burger-image burger-carne-vita" >
+                    <span  class="img-description">PÂRJOALǍ VITǍ</span>
+                    <img src="	https://burgercraft.md/img/addons/2017-10-16/pirjoala-de-vita.svg" alt="parjoala vita">
+                </div>
+                <div class="burger-image burger-sos-bottom" >
+                    <span  class="img-description"></span>
+                    <img src="" alt="">
+                </div>
+                <div class="burger-image burger-cascaval" >
+                    <span  class="img-description"></span>
+                    <img src="" alt="">
+                </div>
+                <div class="burger-image burger-topping" >
+                    <span  class="img-description"></span>
+                    <img src="" alt="">
+                </div>
+                <div class="burger-image burger-bottom">
+                    <span class="img-description">CHIFLA BRIOCHE</span>
+                    <img src="https://burgercraft.md/img/settings-store/2017-10-04/asset-23.svg" alt="chifla-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="index.js"></script>
+<script src="sos-bottom.js"></script>
+<script src="sos-top.js"></script>
+<script src="carne.js"></script>
+<script src="cascaval.js"></script>
+<script src="topping.js"></script>
+
+</body>
+</html>

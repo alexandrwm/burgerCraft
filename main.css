@@ -1,0 +1,390 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background:  rgb(44, 42, 42);
+    background-image: url('bg-texture-small-for-black.png');
+    font-family: Avenir-Regular, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    min-height: 100%;
+}
+/* .page_content{
+    position: relative;
+    margin-top: 10px;
+} */
+/* NAVBAR------------------------------ */
+.navheader{
+    height: 130px;
+    display: flex;
+    
+    background: url(bg-texture-small-for-black.png) ;
+    background-color: rgb(44, 42, 42);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+
+}
+.navheader .logo{
+    display: flex;
+    cursor: pointer;
+    position: relative; 
+    top: 0px;
+    left: 0px; 
+    height: 110px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.middle-part{
+    padding: 0px 20px;
+}
+.topPart{
+    border-bottom: 1px solid #bebdbd;
+    padding-top: 30px;
+    padding-bottom: 14px;
+}
+.contacts{
+    display: inline-block;
+    /* align-items: flex-start;
+    flex-direction: row; */
+
+   
+}
+.contacts .phone {
+    background: url(https://burgercraft.md/img/home/ico-phone.svg) no-repeat left center;
+    font-size: 14px;
+    color: #fff;
+    vertical-align: middle;
+    line-height: 24px;
+    display: inline-block;
+    margin: 0 5px 0 5px;
+}
+
+.contacts .phone span{
+    margin-left: 28px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.contacts .mail {
+    background: url(https://burgercraft.md/img/home/ico-email.svg) no-repeat left center;
+    background-size: auto 23px;
+    font-size: 14px;
+    color: #fff;
+    vertical-align: middle;
+    line-height: 24px;
+    display: inline-block;
+    margin: 0 5px 0 5px;
+}
+
+.contacts .mail span{
+    margin-left: 28px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.contacts .info {
+    background: url(https://burgercraft.md/img/home/information.svg) no-repeat left center;
+    background-size: auto 23px;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    line-height: 24px;
+    
+    margin: 0 5px 0 5px;
+}
+
+.contacts .info span{
+    margin-left: 28px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.topPart .cart{
+    background: url(https://burgercraft.md/img/home/cart.svg) no-repeat center;
+    /* display: block; */
+    width: 24px;
+    height: 18px;
+    background-size: auto 24px;
+    position: relative;
+    float: right;
+
+    /* line-height: 24px; */
+   
+}
+ 
+
+
+.bottomPart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    margin:  0px -15px;
+    padding: 0px 15px;
+    text-align: center;
+    align-items: center;
+    
+}
+.bottomPart a{
+    color: aliceblue;
+    text-decoration: none;
+    margin: 17px 25px 0 25px;
+}
+
+.social_lang{
+    padding: 0px 20px;
+}
+
+.social_lang .social{
+    padding-top: 25px;
+    
+}
+.social_lang .lang{
+    display: flex;
+    flex-direction: row;
+    /* /justify-content: space-between; */
+    cursor: pointer;
+    margin:  0px -15px;
+    padding: 0px 15px;
+    text-align: center;
+    align-items: center;
+    
+}
+.lang a{
+    color: aliceblue;
+    text-decoration: none;
+    margin: 17px 25px 0 25px;
+}
+.lang, .social {
+    display: block;
+    text-align: right;
+}
+
+
+/* BODY_ CONTENT ---------------------------------- */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+.container{
+    margin-top: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 0;
+   
+   
+   
+}
+.container .left_side{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+    float: left;
+    width: 320px;
+}
+
+.container .left_side .option{
+    display: block;
+    border-radius: 0;
+    color: #f8bb46;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0;
+    padding: 5px;
+    cursor: text;
+}
+
+select, input {
+    padding:inherit;
+    background-color: transparent;
+    color: #fff;
+    /* font-family: Avenir-Regular; */
+    font-size: 16px;
+    font-weight: 500;
+    height: 45px;
+    width: 300px;
+    line-height: 41px;
+    border: 2px solid #f8bb46;
+    position: relative;
+    text-transform: uppercase;
+   
+}
+::placeholder {
+color: #fff;
+}
+
+
+select:focus {
+    outline: none; 
+    border-color: #f8bb46; 
+}
+
+
+select::after {
+    content: "▾"; 
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    /* pointer-events: none;  */
+}
+
+.selection {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.cloned-select {
+    margin-bottom: 10px; /* add 10px margin between cloned elements */
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+.select-selected:after {
+  position: absolute;
+    content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+   border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}   
+
+
+ .add_item {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0;
+    margin-right: 45px;
+}
+.plus-icon{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+   /* align-items: center; */
+    /* line-height: 21px; */
+    border: 2px solid #f8bb46;
+    border-radius: 50%;
+  
+}
+ .add_item .text{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    color: #f8bb46;
+    /* font-family: Avenir-Bold; */
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    align-items: center;
+
+}
+.select {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .remove-clone {
+    /* display: none; */
+    color: #f8bb46;
+    width: 15px;
+    height: 17px;
+    background: url(https://burgercraft.md/img/craft/delete-option.png);
+    margin-left: 10px; /* adjust the margin to your liking */
+    cursor: pointer;
+  }
+
+
+.right_side{
+    float: right;
+    width: 720px;
+}
+
+.right_side .burger-image{
+    position: relative;
+    padding: 0 235px;
+    margin-bottom: 10px;
+}
+.right_side .burger-image:nth-child(odd) .img-description::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 170px;
+    margin: auto;
+    width: 60px;
+    height: 30px;
+    background: url(https://burgercraft.md/img/craft/arrow-left.svg) no-repeat center;
+}
+.right_side .burger-image:nth-child(even) .img-description::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 160px;
+    margin: auto;
+    width: 60px;
+    height: 30px;
+    background: url(https://burgercraft.md/img/craft/arrow-right.svg) no-repeat center;
+}
+
+.burger-images .burger-image .img-description {
+    position: absolute;
+    top: 20px;
+    font-family: Pattaya;
+    color: #f8bb46;
+    font-size: 36px;
+    width: 150px;
+    text-align: left;
+    text-transform: lowercase;
+}
+
+/* Target odd descriptions for right alignment */
+ .burger-images > div:nth-child(even) .img-description {
+    text-align: left;
+    top: 0;
+    right:10px;
+}
+
+/* Target even descriptions for left alignment */
+ .burger-images > div:nth-child(odd) .img-description {
+    left: 0;
+    top: 35px;
+    text-align: right;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
