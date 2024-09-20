@@ -1,3 +1,5 @@
+import { updateClonedElement } from './carne.js'; 
+
 document.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
 });
@@ -28,25 +30,25 @@ const addNew = (containerSelector, elementSelector, imageSelector) => {
   const clonedSelect = elementToDuplicate.cloneNode(true);  // Clone the select element block
   const clonedImage = imageElement.cloneNode(true);  // Clone the corresponding image block
 
- 
   clonedSelect.id = 'cloned-' + uniqueId;
   clonedImage.id = 'cloned-image-' + uniqueId;
 
- 
+  
+  const selectElement = clonedSelect.querySelector('select'); 
+  const descriptionElement = clonedImage.querySelector('.img-description'); 
+
+  updateClonedElement(selectElement, clonedImage.querySelector('img'), descriptionElement);
+
   const removeBtn = clonedSelect.querySelector(".remove-clone");
   if (removeBtn) {
     removeBtn.addEventListener("click", () => removeNew(clonedSelect, clonedImage));
   }
 
-
   container.append(clonedSelect);
-
-  
   imageElement.insertAdjacentElement('afterend', clonedImage);
 };
 
 const removeNew = (clonedSelect, clonedImage) => {
- 
   clonedSelect.remove();
   clonedImage.remove();
 };

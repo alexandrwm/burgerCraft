@@ -1,17 +1,20 @@
-const selectCarne = document.querySelector('#carne');
-const displayCarne = document.querySelector('.burger-carne-vita img');
-const imgDescription = document.querySelector('.burger-carne-vita .img-description'); 
-
-
-selectCarne.addEventListener('change', () => {
-    if (selectCarne.value === 'pui-pane') {
-      displayCarne.src = 'https://burgercraft.md/img/addons/2017-10-16/pirjoala-de-pui.svg';
-      imgDescription.textContent = 'FILEU PUI PANE'; // Update the description
-    } else if (selectCarne.value === 'vita') {
-      displayCarne.src = 'https://burgercraft.md/img/addons/2017-10-16/pirjoala-de-vita.svg';
-      imgDescription.textContent = 'PÂRJOALǍ VITǍ'; // Update the description
-    } else if (selectCarne.value === 'pui-grill') {
-      displayCarne.src = 'https://burgercraft.md/img/addons/2017-10-16/pirjoala-de-pui.svg'; // Replace with appropriate image
-      imgDescription.textContent = 'FILEU PUI GRILL'; // Update the description
+const updateClonedElement = (selectElement, imageElement, descriptionElement) => {
+  selectElement.addEventListener('change', () => {
+    switch (selectElement.value) {
+      case 'pui-pane':
+        imageElement.src = 'https://burgercraft.md/img/addons/2017-10-16/pirjoala-de-pui.svg';
+        descriptionElement.textContent = 'FILEU PUI PANE';
+        break;
+      case 'vita':
+        imageElement.src = 'https://burgercraft.md/img/addons/2017-10-16/pirjoala-de-vita.svg';
+        descriptionElement.textContent = 'PÂRJOALǍ VITǍ';
+        break;
+      case 'pui-grill':
+        imageElement.src = 'https://burgercraft.md/img/addons/2017-10-16/pirjoala-de-pui.svg';
+        descriptionElement.textContent = 'FILEU PUI GRILL';
+        break;
     }
   });
+};
+
+export { updateClonedElement };
