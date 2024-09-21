@@ -1,7 +1,17 @@
 const selectTopping = document.querySelector('#topping');
-const displayTopping = document.querySelector('.burger-image.burger-topping img');
-const imgDescriptionTopping = document.querySelector('.burger-image.burger-topping .img-description');
+const displayTopping = document.querySelector('.burger-topping img');
+const imgDescriptionTopping = document.querySelector('.burger-topping .img-description');
+// const imgDescriptionElements = document.querySelectorAll('.burger-image .img-description');
 
+// selectTopping.addEventListener('change', () => {
+//   imgDescriptionElements.forEach(description => {
+//     if (selectTopping.value === 'no_selection') {
+//       description.classList.add('hidden'); // Hide arrows
+//     } else {
+//       description.classList.remove('hidden'); // Show arrows
+//     }
+//   });
+// });
 const toppingOptions = {
   'no_selection': { src: '', text: '', display: 'none' },
   'bacon': { src: 'https://burgercraft.md/img/addons/2017-10-16/bacon-crocant.svg', text: 'Bacon crocant', display: 'block' },
@@ -13,6 +23,20 @@ const toppingOptions = {
   'rosii': { src: 'https://burgercraft.md/img/addons/2017-10-25/rosii.svg', text: 'Roşii', display: 'block' },
   'iceberg': { src: 'https://burgercraft.md/img/addons/2017-10-26/salata-iceberg.svg', text: 'Iceberg', display: 'block' }
 };
+const updateClonedToppingElement = () => {
+  
+  selectTopping.addEventListener('change', () => {
+   
+    const selectedTopping = toppingOptions[selectTopping.value] || toppingOptions['no_selection']; // Fallback pentru 'no_selection'
+    
+    
+    displayTopping.src = selectedTopping.src;
+    imgDescriptionTopping.textContent = selectedTopping.text;
+    
+    displayTopping.style.display = selectedTopping.display;
+    imgDescriptionTopping.style.display = selectedTopping.display;
+  });
+}
 
 selectTopping.addEventListener('change', () => {
   const selectedValue = selectTopping.value;
@@ -22,3 +46,6 @@ selectTopping.addEventListener('change', () => {
   displayTopping.style.display = option.display;
   imgDescriptionTopping.style.display = option.display;
 });
+
+
+export { updateClonedToppingElement };

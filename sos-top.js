@@ -3,11 +3,6 @@ const selectSos = document.querySelector('#sos_top');
 const displaySos = document.querySelector('.burger-sos-top img');
 const imgDescriptionSos = document.querySelector('.burger-sos-top .img-description'); 
 
-// window.addEventListener('load', () => {
-//   displaySos.style.display = 'none';
-//   imgDescriptionSos.style.display = 'none';
-// });
-
 selectSos.addEventListener('change', () => {
     if (selectSos.value === 'no_selection') {
       displaySos.style.display = 'none'; 
@@ -42,3 +37,28 @@ selectSos.addEventListener('change', () => {
     }
     
   });
+
+  const sosOptions = {
+    'no_selection': { src: '', text: '', display: 'none' },
+    'ketchup': { src: 'https://burgercraft.md/img/addons/2017-10-16/sriracha.svg', text: 'Sos Ketchup', display: 'block' },
+    'tartar': { src: 'https://burgercraft.md/img/addons/2017-10-16/tartar-sos.svg', text: 'sos tartar', display: 'block' },
+    'maioneza': { src: 'https://burgercraft.md/img/addons/2017-10-16/maioneza.svg', text: 'sos maioneza', display: 'block' },
+    'usturoi&bbq': { src: 'https://burgercraft.md/img/addons/2017-10-16/tartar-sos.svg', text: 'sos usturoi&bbq', display: 'block' },
+    'sriracha': { src: 'https://burgercraft.md/img/addons/2017-10-16/sriracha.svg', text: 'sos sriracha', display: 'block' },
+    'classy': { src: 'https://burgercraft.md/img/addons/2017-10-16/tartar-sos.svg', text: 'sos classy', display: 'block' },
+    'usturoi': { src: 'https://burgercraft.md/img/addons/2017-10-16/tartar-sos.svg', text: 'sos usturoi', display: 'block' }
+  };
+
+  const updateClonedSosElement = () => {
+  selectSos.addEventListener('change', () => {
+    const selectedSos = sosOptions[selectSos.value] || sosOptions['no_selection']; // Fallback pentru 'no_selection'
+    
+    displaySos.src = selectedSos.src;
+    imgDescriptionSos.textContent = selectedSos.text;
+    
+    displaySos.style.display = selectedSos.display;
+    imgDescriptionSos.style.display = selectedSos.display;
+  });
+}
+
+export { updateClonedSosElement };
