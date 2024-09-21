@@ -1,12 +1,6 @@
-
 const selectSosB = document.querySelector('#sos_bottom');
 const displaySosB = document.querySelector('.burger-sos-bottom img');
 const imgDescriptionSosB = document.querySelector('.burger-sos-bottom .img-description'); 
-
-// window.addEventListener('load', () => {
-//   displaySos.style.display = 'none';
-//   imgDescriptionSos.style.display = 'none';
-// });
 
 
 selectSosB.addEventListener('change', () => {
@@ -17,8 +11,6 @@ selectSosB.addEventListener('change', () => {
     }else if (selectSosB.value === 'ketchup') {
       displaySosB.src = '	https://burgercraft.md/img/addons/2017-10-16/sriracha.svg';
       imgDescriptionSosB.textContent = 'Sos Ketchup'; 
-      console.log('warning d');
-      
     } else if (selectSosB.value === 'tartar') {
       displaySosB.src = '	https://burgercraft.md/img/addons/2017-10-16/tartar-sos.svg';
       imgDescriptionSosB.textContent = 'sos tartar'; 
@@ -41,3 +33,41 @@ selectSosB.addEventListener('change', () => {
     }
     console.log('isnt working;1');
   });
+
+  const updateClonedSosBElement = (selectElement, imageElement, descriptionElement) => {
+    selectElement.addEventListener('change', () => {
+      switch (selectElement.value) {
+        case 'ketchup':
+          imageElement.src = '	https://burgercraft.md/img/addons/2017-10-16/sriracha.svg';
+          descriptionElement.textContent = 'Sos Ketchup';
+          break;
+        case 'tartar':
+          imageElement.src = '	https://burgercraft.md/img/addons/2017-10-16/tartar-sos.svg';
+          descriptionElement.textContent = 'sos tartar';
+          break;
+        case 'maioneza':
+          imageElement.src = '	https://burgercraft.md/img/addons/2017-10-16/maioneza.svg';
+          descriptionElement.textContent = 'sos maioneza';
+          break;
+          case 'usturoi&bbq':
+          imageElement.src = '	https://burgercraft.md/img/addons/2017-10-16/tartar-sos.svg';
+          descriptionElement.textContent = 'sos usturoi&bbq';
+          break;
+          case 'sriracha':
+          imageElement.src ='https://burgercraft.md/img/addons/2017-10-16/sriracha.svg';
+          descriptionElement.textContent = 'sos sriracha';
+          break;
+          case 'classy':
+          imageElement.src = '	https://burgercraft.md/img/addons/2017-10-16/tartar-sos.svg';
+          descriptionElement.textContent = 'sos classy';
+          break;
+          case 'usturoi':
+            imageElement.src ='https://burgercraft.md/img/addons/2017-10-16/tartar-sos.svg';
+            descriptionElement.textContent = 'sos usturoi';
+            break;
+      }
+    });
+  };
+  
+  export { updateClonedSosBElement };
+  

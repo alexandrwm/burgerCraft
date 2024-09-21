@@ -1,14 +1,28 @@
-import { updateClonedElement } from './carne.js'; 
-
-document.addEventListener("DOMContentLoaded", (event) => {
-  console.log("DOM fully loaded and parsed");
-});
+import { updateClonedMeatElement } from './carne.js'; 
+import { updateClonedSosBElement } from './sos-bottom.js'; 
+import { updateClonedCascavalElement } from './cascaval.js'; 
+import { updateClonedSosElement } from './sos-top.js';
+import{ updateClonedToppingElement} from './topping.js';
 
 const addMeatBtn = document.querySelector('.add-meat-item');
 const addSosBtn = document.querySelector('.add-sos-item');
 const addSosTopBtn = document.querySelector('.add-sos-top-item');  
 const addCascavalBtn = document.querySelector('.add-cascaval-item');  
 const addToppingBtn = document.querySelector('.add-topping-item');
+
+const handleSelectionChange = (selectElement, descriptionElement) => {
+  const selectedValue = selectElement.value;
+
+  // Find the parent burger image element to which the img-description belongs
+  const burgerImageElement = descriptionElement.closest('.burger-image');
+
+  if (selectedValue === 'no_selection') {
+      descriptionElement.classList.add('hidden-arrow'); // Hide the arrow
+  } else {
+      descriptionElement.classList.remove('hidden-arrow'); // Show the arrow
+  }
+};
+
 
 // For meat
 addMeatBtn.addEventListener('click', () => addNew('#carne-option-block', '#carne', '.burger-carne-vita'));
@@ -36,14 +50,21 @@ const addNew = (containerSelector, elementSelector, imageSelector) => {
   
   const selectElement = clonedSelect.querySelector('select'); 
   const descriptionElement = clonedImage.querySelector('.img-description'); 
-
-  updateClonedElement(selectElement, clonedImage.querySelector('img'), descriptionElement);
-
   const removeBtn = clonedSelect.querySelector(".remove-clone");
+  
+  selectElement.addEventListener('change', () => handleSelectionChange(selectElement, descriptionElement));
+
+
   if (removeBtn) {
     removeBtn.addEventListener("click", () => removeNew(clonedSelect, clonedImage));
   }
 
+  updateClonedMeatElement(selectElement, clonedImage.querySelector('img'), descriptionElement);
+  updateClonedSosBElement(selectElement, clonedImage.querySelector('img'), descriptionElement);
+  updateClonedCascavalElement(selectElement, clonedImage.querySelector('img'), descriptionElement);
+  updateClonedSosElement(selectElement, clonedImage.querySelector('img'), descriptionElement);
+  updateClonedToppingElement(selectElement, clonedImage.querySelector('img'), descriptionElement);
+ 
   container.append(clonedSelect);
   imageElement.insertAdjacentElement('afterend', clonedImage);
 };

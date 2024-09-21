@@ -2,10 +2,6 @@ const selectCascaval = document.querySelector('#cascaval');
 const displayCascaval = document.querySelector('.burger-cascaval img');
 const imgDescriptionCascaval = document.querySelector('.burger-cascaval .img-description'); 
 
-// window.addEventListener('load', () => {
-//   displaySos.style.display = 'none';
-//   imgDescriptionSos.style.display = 'none';
-// });
 
 selectCascaval.addEventListener('change', () => {
     if (selectCascaval.value === 'no_selection') {
@@ -19,3 +15,26 @@ selectCascaval.addEventListener('change', () => {
       imgDescriptionCascaval.textContent = 'Cașcaval dorblu'; 
     }
   });
+
+
+  const updateClonedCascavalElement = (selectElement, imageElement, descriptionElement) => {
+    selectElement.addEventListener('change', () => {
+      switch (selectElement.value) {
+        case 'no_selection':
+          imageElement.style.display = 'none';
+          descriptionElement.style.display = 'none';
+          break;
+        case 'cheddar':
+          imageElement.src = 'https://burgercraft.md/img/addons/2017-10-16/cheddar.svg';
+          descriptionElement.textContent = 'Cașcaval Chedar';
+          break;
+        case 'dorblu':
+          imageElement.src = '	https://burgercraft.md/img/addons/2017-10-16/1238688899_cascaval-dorblu.svg';
+          descriptionElement.textContent = 'Cașcaval dorblu';
+          break;
+      }
+    });
+  };
+  
+  export { updateClonedCascavalElement };
+  
