@@ -1,16 +1,18 @@
 const selectSosB = document.querySelector('#sos_bottom');
 const displaySosB = document.querySelector('.burger-sos-bottom img');
 const imgDescriptionSosB = document.querySelector('.burger-sos-bottom .img-description'); 
+const sosDiv = document.getElementById('sosBDiv');
 
-
+// sosDiv.style.display = 'none';
 selectSosB.addEventListener('change', () => {
     if (selectSosB.value === 'no_selection') {
       displaySosB.style.display = 'none'; 
       imgDescriptionSosB.style.display = 'none'; 
-
+      sosDiv.style.display = 'none';
     }else if (selectSosB.value === 'ketchup') {
       displaySosB.src = '	https://burgercraft.md/img/addons/2017-10-16/sriracha.svg';
-      imgDescriptionSosB.textContent = 'Sos Ketchup'; 
+      imgDescriptionSosB.textContent = 'Sos Ketchup';
+      sosDiv.style.display = 'block';
     } else if (selectSosB.value === 'tartar') {
       displaySosB.src = '	https://burgercraft.md/img/addons/2017-10-16/tartar-sos.svg';
       imgDescriptionSosB.textContent = 'sos tartar'; 

@@ -10,18 +10,18 @@ const addSosTopBtn = document.querySelector('.add-sos-top-item');
 const addCascavalBtn = document.querySelector('.add-cascaval-item');  
 const addToppingBtn = document.querySelector('.add-topping-item');
 
-const handleSelectionChange = (selectElement, descriptionElement) => {
-  const selectedValue = selectElement.value;
+// const handleSelectionChange = (selectElement, descriptionElement) => {
+//   const selectedValue = selectElement.value;
 
-  // Find the parent burger image element to which the img-description belongs
-  const burgerImageElement = descriptionElement.closest('.burger-image');
+//   // Find the parent burger image element to which the img-description belongs
+//   const burgerImageElement = descriptionElement.closest('.burger-image');
 
-  if (selectedValue === 'no_selection') {
-      descriptionElement.classList.add('hidden-arrow'); // Hide the arrow
-  } else {
-      descriptionElement.classList.remove('hidden-arrow'); // Show the arrow
-  }
-};
+//   if (selectedValue === 'no_selection') {
+//       descriptionElement.classList.add('hidden-arrow'); // Hide the arrow
+//   } else {
+//       descriptionElement.classList.remove('hidden-arrow'); // Show the arrow
+//   }
+// };
 
 
 // For meat

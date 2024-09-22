@@ -214,7 +214,7 @@ select, input {
     font-size: 16px;
     font-weight: 500;
     height: 45px;
-    width: 300px;
+    width: 270px;
     line-height: 41px;
     border: 2px solid #f8bb46;
     position: relative;
@@ -267,9 +267,10 @@ select::after {
 
 
  .add_item {
-    display: inline-block;
+    /* display: inline-block; */
     cursor: pointer;
     margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
     font-size: 0;
     margin-right: 45px;
@@ -326,10 +327,10 @@ select::after {
     padding: 0 235px;
     margin-bottom: 10px;
 }
-/* .right_side .burger-image .img-description.hidden::before,
-.right_side .burger-image .img-description.hidden::after {
-    display: none; 
-} */
+
+ #sosDiv, #sosBDiv, #cascavalDiv, #toppingDiv{
+    display: none;
+ }
 
 .right_side .burger-image:nth-child(odd) .img-description::before {
     content: '';
@@ -377,6 +378,68 @@ select::after {
     left: 0;
     top: 35px;
     text-align: right;}
+
+.summary{
+    display: block;
+    width: 270px;
+    height: 2px;
+    background: #f8bb46;
+    margin: 20px 0 25px;
+    border: none;
+}
+
+button {
+    display: block;
+    width: 270px;
+    height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    position: relative;
+    cursor: pointer; 
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .add-cart {
+    background-color: #f8bb46; 
+    color: #fff;
+  }
+  
+  .reset {
+    background-color: #eceae6; 
+    color: #333; 
+  }
+  
+  .add-cart:hover, .reset:hover {
+    opacity: 0.8;
+  }
+
+  .value-box{
+    color: #f8bb46;
+    font-size: 24px;
+  }
+   .results .label{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    margin-top: 10px;
+    
+  }
+  .total-price{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .total-price .label{
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    
+  }
+.results .value{
+    color: #f8bb46;
+}
 
 
 
