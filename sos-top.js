@@ -2,15 +2,18 @@
 const selectSos = document.querySelector('#sos_top');
 const displaySos = document.querySelector('.burger-sos-top img');
 const imgDescriptionSos = document.querySelector('.burger-sos-top .img-description'); 
-
+const divBox = document.querySelector('#sosDiv');
+// divBox.style.display = 'none';
 selectSos.addEventListener('change', () => {
     if (selectSos.value === 'no_selection') {
       displaySos.style.display = 'none'; 
       imgDescriptionSos.style.display = 'none'; 
+      divBox.style.display = 'none';
     }else if (selectSos.value === 'ketchup') {
       displaySos.src = '	https://burgercraft.md/img/addons/2017-10-16/sriracha.svg';
       imgDescriptionSos.textContent = 'Sos Ketchup'; 
       displaySos.style.display = 'block';
+      divBox.style.display = 'block';
       imgDescriptionSos.style.display = 'block';
     } else if (selectSos.value === 'tartar') {
       displaySos.src = '	https://burgercraft.md/img/addons/2017-10-16/tartar-sos.svg';
@@ -51,7 +54,7 @@ selectSos.addEventListener('change', () => {
 
   const updateClonedSosElement = () => {
   selectSos.addEventListener('change', () => {
-    const selectedSos = sosOptions[selectSos.value] || sosOptions['no_selection']; // Fallback pentru 'no_selection'
+    const selectedSos = sosOptions[selectSos.value] || sosOptions['no_selection']; 
     
     displaySos.src = selectedSos.src;
     imgDescriptionSos.textContent = selectedSos.text;

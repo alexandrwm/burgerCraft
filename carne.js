@@ -1,16 +1,24 @@
 const selectCarne = document.querySelector('#carne');
 const displayCarne = document.querySelector('.burger-carne-vita img');
 const imgDescription = document.querySelector('.burger-carne-vita .img-description'); 
+const summaryCarne = document.querySelector('.result-meat ');
 selectCarne.addEventListener('change', () => {
     if (selectCarne.value === 'pui-pane') {
       displayCarne.src = 'https://burgercraft.md/img/addons/2017-10-16/pirjoala-de-pui.svg';
       imgDescription.textContent = 'FILEU PUI PANE'; 
+      summaryCarne.textContent = 'FILEU PUI PANE:35lei';
+      
+
     } else if (selectCarne.value === 'vita') {
       displayCarne.src = 'https://burgercraft.md/img/addons/2017-10-16/pirjoala-de-vita.svg';
       imgDescription.textContent = 'PÂRJOALǍ VITǍ'; 
+      summaryCarne.textContent = 'FILEU Parjoala Vita :25lei';
+
     } else if (selectCarne.value === 'pui-grill') {
       displayCarne.src = 'https://burgercraft.md/img/addons/2017-10-16/pirjoala-de-pui.svg'; 
-      imgDescription.textContent = 'FILEU PUI GRILL'; n
+      imgDescription.textContent = 'FILEU PUI GRILL'; 
+      summaryCarne.textContent = 'FILEU PUI Grill:25lei';
+
     }});
 
 

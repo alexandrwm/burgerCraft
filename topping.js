@@ -1,17 +1,8 @@
 const selectTopping = document.querySelector('#topping');
 const displayTopping = document.querySelector('.burger-topping img');
 const imgDescriptionTopping = document.querySelector('.burger-topping .img-description');
-// const imgDescriptionElements = document.querySelectorAll('.burger-image .img-description');
-
-// selectTopping.addEventListener('change', () => {
-//   imgDescriptionElements.forEach(description => {
-//     if (selectTopping.value === 'no_selection') {
-//       description.classList.add('hidden'); // Hide arrows
-//     } else {
-//       description.classList.remove('hidden'); // Show arrows
-//     }
-//   });
-// });
+const divBox = document.querySelector('#toppingDiv');
+// divBox.style.display = 'none';
 const toppingOptions = {
   'no_selection': { src: '', text: '', display: 'none' },
   'bacon': { src: 'https://burgercraft.md/img/addons/2017-10-16/bacon-crocant.svg', text: 'Bacon crocant', display: 'block' },
@@ -29,7 +20,7 @@ const updateClonedToppingElement = () => {
    
     const selectedTopping = toppingOptions[selectTopping.value] || toppingOptions['no_selection']; // Fallback pentru 'no_selection'
     
-    
+    divBox.style.display = selectedTopping.display;
     displayTopping.src = selectedTopping.src;
     imgDescriptionTopping.textContent = selectedTopping.text;
     

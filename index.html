@@ -77,7 +77,7 @@
                 <label class="option" id="chifla-option" >1. Chifla</label>
                 <div class="selection" >
                     <select  id="chifla">
-                        <option value="brioche">Chifla BRIOCHE (8lei)</option>
+                        <option  data-price="8" value="brioche">Chifla BRIOCHE (8lei)</option>
                     </select>
                 </div>
 
@@ -85,9 +85,9 @@
                     <label class="option" id="carne-option" >2. CARNE</label>
                     <div class="select">
                         <select  id="carne">
-                            <option value="vita">Pârjoalǎ vita (35lei)</option>
-                            <option value="pui-pane">Fileu Pui pane (25lei)</option>
-                            <option value="pui-grill">fileu pui grill (25lei)</option>
+                            <option data-price="35" value="vita">Pârjoalǎ vita (35lei)</option>
+                            <option data-price="25" value="pui-pane">Fileu Pui pane (25lei)</option>
+                            <option data-price="25" value="pui-grill">fileu pui grill (25lei)</option>
                         </select>
                         <div class="remove-clone"></div>
                     </div>
@@ -105,13 +105,13 @@
                     <div class="select">
                     <select  id="sos_bottom">
                         <option value="no_selection">-</option>
-                        <option value="ketchup">Sos Ketchup (4lei)</option>
-                        <option value="tartar">sos tartar (4lei)</option>
-                        <option value="maioneza">sos maioneza (4lei)</option>
-                        <option value="usturoi&bbq">sos usturoi&bbq (4lei)</option>
-                        <option value="sriracha">sos sriracha (iute) (6lei)</option>
-                        <option value="classy">sos classy (4lei)</option>
-                        <option value="usturoi">sos usturoi (4lei)</option>
+                        <option data-price="4" value="ketchup">Sos Ketchup (4lei)</option>
+                        <option data-price="4" value="tartar">sos tartar (4lei)</option>
+                        <option data-price="4" value="maioneza">sos maioneza (4lei)</option>
+                        <option data-price="4" value="usturoi&bbq">sos usturoi&bbq (4lei)</option>
+                        <option data-price="6" value="sriracha">sos sriracha (iute) (6lei)</option>
+                        <option data-price="4" value="classy">sos classy (4lei)</option>
+                        <option data-price="4" value="usturoi">sos usturoi (4lei)</option>
                     </select>
                     <div class="remove-clone"></div>
                     </div>
@@ -128,13 +128,13 @@
                     <div class="select">
                         <select  id="sos_top">
                             <option value="no_selection">-</option>
-                            <option value="ketchup">Sos Ketchup (4lei)</option>
-                            <option value="tartar">sos tartar (4lei)</option>
-                            <option value="maioneza">sos maioneza (4lei)</option>
-                            <option value="usturoi&bbq">sos usturoi&bbq (4lei)</option>
-                            <option value="sriracha">sos sriracha (iute) (6lei)</option>
-                            <option value="classy">sos classy (4lei)</option>
-                            <option value="usturoi">sos usturoi (4lei)</option>
+                            <option data-price="4" value="ketchup">Sos Ketchup (4lei)</option>
+                            <option data-price="4" value="tartar">sos tartar (4lei)</option>
+                            <option data-price="4" value="maioneza">sos maioneza (4lei)</option>
+                            <option data-price="4" value="usturoi&bbq">sos usturoi&bbq (4lei)</option>
+                            <option data-price="6" value="sriracha">sos sriracha (iute) (6lei)</option>
+                            <option data-price="4" value="classy">sos classy (4lei)</option>
+                            <option data-price="4" value="usturoi">sos usturoi (4lei)</option>
                         </select>
                         <div class="remove-clone"></div>
                     </div>
@@ -150,8 +150,8 @@
                     <div class="select">
                         <select  id="cascaval">
                              <option value="no_selection">-</option>
-                             <option value="cheddar">Cașcaval Chedar (12lei)</option>
-                             <option value="dorblu">Cașcaval dorblu (15lei)</option>
+                             <option data-price="12" value="cheddar">Cașcaval Chedar (12lei)</option>
+                             <option data-price="15"value="dorblu">Cașcaval dorblu (15lei)</option>
                     
                         </select>
                     <div class="remove-clone"></div>
@@ -168,14 +168,14 @@
                         <div class="select">
                           <select  id="topping">
                             <option value="no_selection">-</option>
-                            <option value="bacon">bacon crocant (12lei)</option>
-                            <option value="ou-prajit">ou prǎjit (10lei)</option>
-                            <option value="ceapa-marin">ceapa marin. (2lei)</option>
-                            <option value="ceapa-caramel">ceapa caramel (4lei)</option>
-                            <option value="castraveti-murati">castraveți murați (4lei)</option>
-                            <option value="castraveti-proaspeti">castraveți proaspeți (4lei)</option>
-                            <option value="rosii">roşii (5lei)</option>
-                            <option value="iceberg">iceberg (5lei)</option>
+                            <option data-price="12" value="bacon">bacon crocant (12lei)</option>
+                            <option data-price="10" value="ou-prajit">ou prǎjit (10lei)</option>
+                            <option data-price="2" value="ceapa-marin">ceapa marin. (2lei)</option>
+                            <option data-price="4" value="ceapa-caramel">ceapa caramel (4lei)</option>
+                            <option data-price="4" value="castraveti-murati">castraveți murați (4lei)</option>
+                            <option data-price="4" value="castraveti-proaspeti">castraveți proaspeți (4lei)</option>
+                            <option data-price="5" value="rosii">roşii (5lei)</option>
+                            <option data-price="5" value="iceberg">iceberg (5lei)</option>
                          </select>
                          <div class="remove-clone"></div>
                         </div> 
@@ -185,13 +185,59 @@
                     <span class="plus-icon"></span>
                     <span class="text">Adauga item</span>
                 </div>
+
                 
 
                 <div class="persName">
                     <input type="text" placeholder="Numeşte-ți burgerul &#127828;">
                 </div>
 
+                <hr class="summary">
+                <div class="results">
+                    <div class="result-chifla">
+                        <span class="label">CHIFLA BRIOCHE : </span>
+                        <span class="value">8 lei</span>
+                    </div>
+                    <div class="result-sosT">
+                        <span class="label"></span>
+                        <span class="value"></span>
+                    </div>
+                    <div class="result-meat">
+                        <span class="label">PÂRJOALĂ VITĂ: </span>
+                        <span class="value">35 lei</span>
+                    </div>
+                    <div class="result-sosB">
+                        <span class="label"></span>
+                        <span class="value"></span>
+                    </div>
+                    <div class="result-cascaval">
+                        <span class="label"></span>
+                        <span class="value"></span>
+                    </div>
+                    <div class="result-topping">
+                        <span class="label"></span>
+                        <span class="value"></span>
+                    </div>
+                    
 
+
+                    <div class="total-price">
+                        <span class="label">Total: </span>
+                        <span class="value-box">
+                            <span class="price-box"></span>
+                            "lei"
+                        </span>
+                    </div>
+
+                </div>
+                <div class="add-button">
+                    <button type="button" class="add-cart">
+                        <span class="addCart-span">Adaugǎ in coş</span> 
+                    </button>
+                    <button type="button" class="reset">
+                        <span class="reset-span">Resetează</span>
+                    </button>
+                </div>
 
             </div>
         </div>
@@ -202,7 +248,7 @@
                     <span class="img-description">CHIFLA BRIOCHE</span>
                     <img src="	https://burgercraft.md/img/settings-store/2017-10-04/asset-1.svg" alt="chifla-top">
                 </div>
-                <div class="burger-image burger-sos-bottom" >
+                <div class="burger-image burger-sos-bottom"id="sosBDiv" >
                     <span  class="img-description"></span>
                     <img src="" alt="">
                 </div>
@@ -210,15 +256,15 @@
                     <span  class="img-description">PÂRJOALǍ VITǍ</span>
                     <img src="	https://burgercraft.md/img/addons/2017-10-16/pirjoala-de-vita.svg" alt="parjoala vita">
                 </div>
-                <div class="burger-image burger-sos-top" >
+                <div class="burger-image burger-sos-top" id="sosDiv">
                     <span  class="img-description"></span>
                     <img src="" alt="">
                 </div>
-                <div class="burger-image burger-cascaval" >
+                <div class="burger-image burger-cascaval" id="cascavalDiv" >
                     <span  class="img-description"></span>
                     <img src="" alt="">
                 </div>
-                <div class="burger-image burger-topping" >
+                <div class="burger-image burger-topping" id="toppingDiv">
                     <span  class="img-description"></span>
                     <img src="" alt="">
                 </div> 
@@ -227,6 +273,7 @@
                     <img src="https://burgercraft.md/img/settings-store/2017-10-04/asset-23.svg" alt="chifla-bottom">
                 </div>
             </div>
+            
         </div>
     </div>
 </div>
