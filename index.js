@@ -51,15 +51,17 @@ const addNew = (containerSelector, elementSelector, imageSelector) => {
   const selectElement = clonedSelect.querySelector('select'); 
   const descriptionElement = clonedImage.querySelector('.img-description'); 
   const removeBtn = clonedSelect.querySelector(".remove-clone");
-  
-  selectElement.addEventListener('change', () => handleSelectionChange(selectElement, descriptionElement));
+  const summaryElement = document.createElement('div'); // Create a new summary div for each clone
+  summaryElement.classList.add('cloned-summary');
+  // selectElement.addEventListener('change', () => handleSelectionChange(selectElement, descriptionElement));
 
 
   if (removeBtn) {
-    removeBtn.addEventListener("click", () => removeNew(clonedSelect, clonedImage));
+    removeBtn.addEventListener("click", () => removeNew(clonedSelect, clonedImage, summaryElement));
   }
 
-  updateClonedMeatElement(selectElement, clonedImage.querySelector('img'), descriptionElement);
+  updateClonedMeatElement(selectElement, clonedImage.querySelector('img'), descriptionElement, summaryElement);
+  
   updateClonedSosBElement(selectElement, clonedImage.querySelector('img'), descriptionElement);
   updateClonedCascavalElement(selectElement, clonedImage.querySelector('img'), descriptionElement);
   updateClonedSosElement(selectElement, clonedImage.querySelector('img'), descriptionElement);
